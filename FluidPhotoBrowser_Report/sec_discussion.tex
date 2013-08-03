@@ -1,0 +1,27 @@
+\section{Discussion}
+\label{sec.discussion}
+While solving the assignment we had some discussions regarding the
+\emph{communication mechanism} and the proposed solution for the
+\emph{multi-device handling} in the extra step of the assignment.\\ \\
+The current implementation of the communication mechanism is rigid. The client
+application on the Android phone has to know the exact IP address and port of the
+tabletop in order to be able to establish communication. This solution requires
+a wireless infrastructure and a way to let the customer
+know the IP address of the tabletop.\\ \\
+Besides this, the proposed solution for multi-device handling suggests attaching
+RFID tags to each phone which should be read by the tabletop and based on this
+look up the fixed IP address of the phone in the network. This solution requires
+a lot of extra resources and a lot of configuration.\\ \\
+We propose a solution based on the BlueTooth (BT) technology. Every Android
+phone has an incorporated BT module. We can attach one bluetooth module to the
+tabletop and write our server based on that: the server on the tabletop
+implements and publishes a \emph{photoBrowsing} service via the BT module. When
+the application is started on the Android phone, it will bring up dialog with
+the present devices. The user should see the tabletop in the list of devices and
+select it to start the communication. A pairing phase might be required before
+the communication is possible.\\ \\
+In order to implement the above described solution, on the Android side we would
+use the existing API for BT and on the server side (MT4J) we propose to use the
+BlueCove Java library for Bluetooth\footnote{\url{http://bluecove.org/}}, a
+JSR-82 implementation.
+

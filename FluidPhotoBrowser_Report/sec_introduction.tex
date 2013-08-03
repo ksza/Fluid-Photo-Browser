@@ -1,0 +1,32 @@
+\section{Introduction}
+\label{sec.introduction}
+This document describes the design and considerations of the \emph{Fluid Photo
+Browser} project, representing the second mandatory assignment. The goal of the
+project is to design, implement and document a multi-device photo browser. This
+will allow users to move photos from smart phones holding personal
+information, to a shared/public tabletop where many people can browse the photos
+all together. Please find out more about the requirements and
+specifications of the project
+\href{https://blog.itu.dk/SPVC-E2010/exercises/assignment-2/}{here}\footnote{\url{https://blog.itu.dk/SPVC-E2010/exercises/assignment-2/}}.
+You can browse the source code on the project's
+\href{http://subversion.assembla.com/svn/fluid_photo_browser/trunk}{svn}\footnote{\url{http://subversion.assembla.com/svn/fluid_photo_browser/}}.
+
+\subsection{Overview}
+\label{sec.introduction.overview}
+The system consists of an Android device and a tabletop that communicate in
+order to exchange images. The main characteristics of the system are: two-way
+device communication and remote control of images. The communication protocol is
+bidirectional allowing the android phone to send images to the tabletop and vice
+versa. Furthermore, the system provides the option to control remotely the
+images on the tabletop using the phone. The design and implementation of these
+requirements are explained in the following paragraphs.
+
+\subsection{Motivation}
+\label{sec.introduction.motivation}
+The diversity of devices present nowadays on the market has arisen the
+need of developing multi-device applications, that allow owners of different
+types of devices to inter-connect with others in diffent ways. We developed
+an application which connects 2 devices: an Android phone and a tabletop. This
+is an interesting project which gives us a better understanding of Android and
+multitouch surface specific applications, but also the challenges encountered
+while interconnecting them.
